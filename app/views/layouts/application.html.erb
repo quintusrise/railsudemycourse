@@ -7,26 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <head class="navbar navbar-fixed-top navbar-default">
+  
+  <%= render 'layouts/navigation' %>
     <div class="container">
-      <%= link_to "myRecipes", "", class: "btn btn-lg btn-success", id: "logo" %>
-      <div class="nav-item">
-        <%= link_to "firstLink", "", class: "btn btn-default btn-warning" %>
-      </div>
-      <div class="nav-item">
-        <%= link_to "secondLink", "", class: "btn btn-default btn-warning" %>
-      </div>
-      <div class="nav-item">
-        <%= link_to "thirdLink", "", class: "btn btn-default btn-warning" %>
-      </div>
+      <%= yield %>
+      
     </div>
-  </head>
-  <div class="container">
-    <%= yield %>
-    <div class="footer">
-      <p>&copy; MyRecipes 2016</p>
-    </div>
-  </div>
+  <%= render 'layouts/footer' %>
 
 
 </body>
